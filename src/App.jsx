@@ -11,7 +11,7 @@ function App() {
 
   return (
     <CartProvider>
-      <div className='min-h-screen bg-[#56162C]'>
+      <div className='min-h-screen bg-[#B4CF66] dark:bg-[#3d348b]'>
 
         {/*  Header - Cart Btn  */}
         <Header setIsSidebarOpen={setIsSidebarOpen} />
@@ -24,6 +24,8 @@ function App() {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
+
+        <Footer />
 
       </div>
     </CartProvider>

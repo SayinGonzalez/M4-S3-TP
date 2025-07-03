@@ -52,9 +52,9 @@ export default function useCartList() {
 
   const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
 
-  /* // Remover todo lo de cart
+  /* // Remover todo lo del carrito
     const handleRemoveProductAll = () => {
-      setCartList([])
+      setCart([])
     } */
 
   /* ────────────────────────────────────────────────────────────────────────────── */

@@ -15,27 +15,42 @@ const CartSidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
     <>
       {
         /*  Renzeriza el Modal si isModalOpen es true  */
-        isSidebarOpen && <div className="fixed inset-0 bg-black/90 flex items-center justify-center p-5">
-          <div className='bg-slate-950 rounded-xl shadow-lg px-6 py-4 w-11/12 max-w-md relative max-h-full overflow-y-auto'>
-            <div className="w-full text-right mb-4">
+        isSidebarOpen && <div className="fixed inset-0 bg-black/90 flex justify-end">
+          {/* CONTENEDOR SIDEBAR */}
+          <div className='
+            bg-[#B4CF66] dark:bg-[#3d348b]
+            rounded-xl shadow-lg w-lg h-full overflow-y-auto
+            grid grid-rows-[auto_1fr_auto]
+          '>
+            
+            {/* CONTENEDOR BTN X */}
+            <div className="
+              w-full text-right sticky top-0 px-6 py-3 
+              shadow-md shadow-current
+              bg-[#44803F]
+              dark:bg-[#13102F]
+            ">
               {/*  Btn para cerrar el modal  */}
               <button
                 onClick={handleCloseSidebar}
-                className="text-gray-400 hover:text-gray-300 transform hover:scale-110 duration-300"
+                className="
+                text-gray-300 hover:text-gray-200
+                dark:text-gray-400 dark:hover:text-gray-300 
+                transform hover:scale-110 duration-300"
               >
-                <i className="bi bi-x-square text-2xl font-bold"></i>
+                <i className="bi bi-x-square text-2xl"></i>
               </button>
               {/* <button
 								onClick={handleRemoveProductAll}
 								className="text-white"
 							>
-								eliminar todo
+								Eliminar Productos
 							</button> */}
             </div>
 
             { /*  Si la lista no está vacía se renderizan las pelis sino se muestra un msj  */
               cart.length > 0 ? (
-                <ul>
+                <ul className="m-6">
                   {cart.map((product) => (
                     <ProductCardSidebar
                       key={product.id}
@@ -47,9 +62,13 @@ const CartSidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                 <EmptyCart />
               )
             }
-            <div className="flex justify-between text-slate-200 py-2 px-5 bg-fuchsia-950 -mx-6 -mb-4">
+
+            {/* Precio total de la suma de todos los productos */}
+            <div className="sticky bottom-0 flex justify-between text-slate-200 font-semibold py-3 px-5 shadow-inner
+            bg-[#397d32] shadow-[#cdff36]
+            dark:bg-indigo-950  dark:shadow-[#6055be]">
               <p>Precio Total: </p>
-              <p> {totalPrice} </p>
+              <p> $ {totalPrice} </p>
             </div>
 
           </div>

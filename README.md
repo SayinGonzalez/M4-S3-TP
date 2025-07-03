@@ -1,3 +1,6 @@
+## 🔗 Enlace de despliegue en Netlify
+[agregar enlace]
+
 ## 📁 Estructura del Proyecto
 
 ```
@@ -13,14 +16,15 @@
 │   │   ├── CartSidebar.jsx           #  Muestra los productos en el carrito con cantidad y total
 │   │   ├── ProductCardSidebar.jsx    #  Diseño de la Card para los productos en el sidebar
 │   │   ├── EmptyCart.jsx             #  Diseño para mostrar msj "Carrito vacío"
-│   │   ├── Header.jsx                #  Contiene el botón para ver "Carrito"
+│   │   ├── Header.jsx                #  Contiene el botón para "Carrito" y "Tema Claro/Oscuro"
 │   │   ├── Footer.jsx
-│   │   └── ThemeButton.jsx   # Botón para cambiar el tema
+│   │   └── ThemeButton.jsx      # Botón para cambiar el tema
 │   ├── context
-│   │   ├── CartContext.jsx   # Maneja el estado global del carrito
-│   │   ├── ThemeContext.jsx  # Maneja el tema claro/oscuro
+│   │   ├── CartContext.jsx      # Maneja el estado global del carrito
+│   │   ├── ThemeContext.jsx     # Maneja el tema claro/oscuro
 │   ├── /hooks
-│   │   └── useCart           #  Manejo de lógica del carrito
+│   │   ├── useCart           #  Manejo de lógica del carrito
+│   │   └── useTheme          #  Manejo de lógica del tema claro/oscuro
 │   ├── App.jsx     #  Componente principal
 │   ├── main.jsx    #  Renderiza la aplicación
 │   └── index.css
@@ -40,9 +44,3 @@
 -  React con Vite
 -  Tailwind CSS
 -  Boostrap Icons
-
-
-## Pendientes
-- theme
-- footer
-- img en las cards tanto en inicio como en carrito

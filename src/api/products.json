@@ -1,22 +1,74 @@
 [
   {
     "id": 1,
-    "name": "Laptop",
-    "price": 1000
+    "name": "1984",
+    "price": 1000,
+    "img": "1984"
   },
   {
     "id": 2,
-    "name": "Auriculares",
-    "price": 200
+    "name": "Cien Años de Soledad",
+    "price": 200,
+    "img": "cien-anios-de-soledad"
   },
   {
     "id": 3,
-    "name": "Mouse",
-    "price": 50
+    "name": "Dune",
+    "price": 50,
+    "img": "dune"
   },
   {
     "id": 4,
-    "name": "Teclado",
-    "price": 150
+    "name": "El Principe",
+    "price": 150,
+    "img": "el-principe"
+  },
+  {
+    "id": 5,
+    "name": "El Tunel",
+    "price": 1000,
+    "img": "el-tunel"
+  },
+  {
+    "id": 6,
+    "name": "Encuentros",
+    "price": 200,
+    "img": "encuentros"
+  },
+  {
+    "id": 7,
+    "name": "Ensayo sobre la Ceguera",
+    "price": 50,
+    "img": "ensayo-sobre-la-ceguera"
+  },
+  {
+    "id": 8,
+    "name": "Ensayo sobre la Lucidez",
+    "price": 150,
+    "img": "ensayo-sobre-la-lucidez"
+  },
+  {
+    "id": 9,
+    "name": "Fahrenheit 451",
+    "price": 1000,
+    "img": "fahrenheit-451"
+  },
+  {
+    "id": 10,
+    "name": "Juego de Tronos",
+    "price": 200,
+    "img": "juego-de-tronos-cancion-de-hielo-y-fuego-1"
+  },
+  {
+    "id": 11,
+    "name": "La felicidad",
+    "price": 50,
+    "img": "la-felicidad"
+  },
+  {
+    "id": 12,
+    "name": "La Piel del Cielo",
+    "price": 150,
+    "img": "la-piel-del-cielo"
   }
 ]

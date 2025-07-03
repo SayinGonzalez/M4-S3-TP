@@ -5,53 +5,58 @@ import { useCartContext } from "../contexts/CartContext"
 //  Card para las pelis en el modal
 const ProductCardSidebar = ({ product }) => {
 
- const {removeFromCart, updateQuantity} = useCartContext();
+  const { removeFromCart, updateQuantity } = useCartContext();
 
   return (
 
-    <li key={product.id} className="bg-gray-800 flex gap-3 items-center justify-between p-2 mb-3 rounded-lg">
+    <li key={product.id} className="bg-[#44803F] dark:bg-indigo-950 flex items-center justify-between p-2 mb-3 rounded-lg">
 
-      {/* {/*  Imágen de la película  
-      <div className="min-w-20 max-w-20 h-20 overflow-hidden rounded-lg">
+      {/*  Imágen de la película  */}
+      <div className="min-w-16 max-w-16 h-20 overflow-hidden rounded-lg">
         <img
-          src={`/assets/imgProducts/${product.img}.jpg`}
+          src={`/img/${product.img}.jpg`}
           alt={product.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain bg-black/40"
         />
-      </div> */}
-      {console.log(product.quantity)}
+      </div>
+
       {/*  Nombre de la película  */}
       <span className="text-white text-center">{product.name}</span>
 
-      <div className="flex gap-2 items-center">
-        {/*  Btn para quitar una unidad del producto  */}
+      <div className="flex gap-4 items-center text-slate-200 dark:text-slate-400">
+        <div className="flex gap-2 items-center">
+          {/*  Btn para quitar una unidad del producto  */}
+          <button
+            className="hover:text-white dark:hover:text-slate-50 w-8 h-8 rounded-md"
+            onClick={() => updateQuantity(product.id, product.quantity - 1)}
+          >
+            <i className="bi bi-dash-lg  "></i>
+          </button>
+          {/*  Cantidad del producto  */}
+          <p className="text-white border border-slate-200 dark:border-slate-400 px-1.5 py-0.5 min-w-7 text-center rounded-sm">
+            {product.quantity}
+          </p>
+
+          {/*  Btn para agregar una unidad del producto  */}
+          <button
+            className="hover:text-white dark:hover:text-slate-50 w-8 h-8 rounded-md"
+            onClick={() => updateQuantity(product.id, product.quantity + 1)}
+          >
+            <i className="bi bi-plus-lg  "></i>
+          </button>
+        </div>
+
+        {/*  Btn para remover el producto  */}
         <button
-          className="text-slate-400 hover:text-slate-50 w-8 h-8 rounded-md"
-          onClick={() => updateQuantity(product.id, product.quantity-1)}
+          className="bg-transparent hover:text-white dark:hover:text-slate-50 w-8 h-8 rounded-md"
+          onClick={() => removeFromCart(product.id)}
         >
-          <i className="bi bi-dash-lg  "></i>
-        </button>
-        {/*  Cantidad del producto  */}
-        <p className="text-white border border-slate-400 px-1.5 py-0.5 rounded-sm">{product.quantity}</p>
-        {/*  Btn para agregar una unidad del producto  */}
-        <button
-          className="text-slate-400 hover:text-slate-50  w-8 h-8 rounded-md"
-          onClick={() => updateQuantity(product.id, product.quantity+1)}
-        >
-          <i className="bi bi-plus-lg  "></i>
+          <i className="bi bi-trash3 text-lg"></i>
         </button>
       </div>
 
-      {/*  Btn para remover el producto  */}
-      <button
-        className="bg-transparent text-slate-400 hover:text-slate-50 w-8 h-8 rounded-md"
-        onClick={() => removeFromCart(product.id)}
-      >
-        <i className="bi bi-trash3 text-lg"></i>
-      </button>
-
     </li>
-    
+
 
   )
 }
