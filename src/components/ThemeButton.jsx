@@ -26,10 +26,3 @@ const ThemeButton = () => {
 }
 
 export default ThemeButton
-
-/* 
-bi-moon-fill  -  icon luna con relleno
-bi-moon-stars-fill   -  icon luna con estrellas con relleno
-bi-brightness-high-fill  -  sol con lineas
-bi-brightness-low-fill  -  sol con puntos
-*/

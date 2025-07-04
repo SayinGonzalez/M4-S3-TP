@@ -27,20 +27,6 @@ export default function useTheme() {
   }
 }
 
-
-/* 
-
-  useEffect(() => {
-    const root = document.documentElement
-    root.classList.remove('light', 'dark')
-    root.classList.add(theme)
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
-  } */
-
 /* const [theme, setTheme] = useState(() => {
 return (
   localStorage.getItem('theme') ||

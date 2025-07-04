@@ -68,7 +68,7 @@ const CartSidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             bg-[#397d32] shadow-[#cdff36]
             dark:bg-indigo-950  dark:shadow-[#6055be]">
               <p>Precio Total: </p>
-              <p> $ {totalPrice} </p>
+              <p>$ {totalPrice}</p>
             </div>
 
           </div>

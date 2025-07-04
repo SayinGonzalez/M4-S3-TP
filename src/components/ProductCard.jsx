@@ -14,7 +14,10 @@ const ProductCard = ({ product }) => {
     '>
 
       {/*  Imágen de la película  */}
-      <div className="w-full md:h-80 lg:h-96 overflow-hidden rounded-xl">
+      <div className="
+        w-full md:h-80 lg:h-96 overflow-hidden rounded-xl 
+        shadow shadow-current dark:shadow-white/50
+      ">
         <img
           src={`/img/${product.img}.jpg`}
           alt={product.name}
